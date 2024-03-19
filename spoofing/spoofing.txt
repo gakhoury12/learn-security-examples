@@ -1,1 +1,7 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+    The vulnerability in this case happens when a script is submitted as an input on the front end website.
+    This allows a user to submit malicious code into a browser input and perform a Javascript injection attack.
+    They can add links to a webpage and trick normal users to click on them. This would expose the user to a host
+    of different vulnerabilities as this malicious page is in no way controlled by us the developers. 
+    This violates the CIA property of integrity, because we can no longer be sure that our data is trustworthy and
+    untampered with.
