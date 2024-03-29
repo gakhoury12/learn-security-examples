@@ -1,2 +1,15 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The vulnerability in this code is that the insecure version of the code does not catch
+errors that arise when an ID is queried from the database. This could lead to a 
+denial of service attack where a malicious actor purposefuly submits input that 
+will lead to an error, crashing the server. This could be done many times over 
+using VPNs that make the internet traffic appear to be coming from different sources,
+causing the service to come to a grinding halt. The secure version has proper
+error checking so that attacks like this would not bring down an entire instance
+of the server. 
+
+To further prevent such attacks, we could implement capchas that help distinguish
+real users from bots. This would make it much harder to launch at attack at the
+scale that would cause system failure.

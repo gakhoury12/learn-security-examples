@@ -1,3 +1,14 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The vulnerability in insecure.js is that the input for username is not sanitized before
+it is used to query the noSQL database. The secure version returns a 400 error and informs
+the user that they submitted an invalid input.
+
+Tampering violates the I or "Integrity" principle of the CIA properties. Tampering changes
+data, which is contrary to the goal of Integrity, which is to keep data untampered with.
+
+An additional security mechanism that could be implemented is flagging users that submit 
+inputs that are not strings for a human to review, so that threats can be evaluated 
+and kept under control.
