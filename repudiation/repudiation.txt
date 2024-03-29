@@ -1,2 +1,11 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+The initial insecure version did not log that a certain user sent a certain 
+message. This would make it much more difficult to determine who took a malicious 
+action after the fact since the logs are not sufficient. This is in stark contrast
+to the secure version, which does have proper logging.
+
+Additional security mechanisms could take the form of additional logging that 
+gives technical staff a more granular view of what actions the user is taking
+on the site. For example, was the send successful? 
